@@ -3,7 +3,7 @@ params:
 
 server:
   port: 8081
-  name: test
+  name: Test
 
 spring:
     datasource:
