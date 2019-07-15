@@ -1,11 +1,12 @@
 package cn.mainapp;
 
 public class GuiBingPaiXu {
-    static int[] a = {14,13,10,7,6,9,5,1,3,11,12};
+    static int[] a ;
     static int[] b ;
     static int fenleiCounter = 0;
     
     public static void main(String[] args) {
+        a = RandomNumber.genArray(100);
         int length = a.length;
         b = new int[length];
         fenlei(0,length-1);
@@ -24,7 +25,6 @@ public class GuiBingPaiXu {
             fenlei(mid+1,high);
             guibing(low,mid,high);
         }
-        fenleiCounter++;
     }
     
     public static void guibing(int low,int mid,int high){
@@ -33,6 +33,7 @@ public class GuiBingPaiXu {
         j=mid+1;
         k=low;
         while(h<=mid&&j<=high){
+            fenleiCounter++;
             if(a[h]<=a[j]){
                 b[k]=a[h];
                 h++;
@@ -47,12 +48,14 @@ public class GuiBingPaiXu {
             for(i=j;i<=high;i++){
                 b[k]=a[i];
                 k++;
+                fenleiCounter++;
             }
         }
         else{
             for(i=h;i<=mid;i++){
                 b[k]=a[i];
                 k++;
+                fenleiCounter++;
             }
         }
         for(i=low;i<=high;i++){

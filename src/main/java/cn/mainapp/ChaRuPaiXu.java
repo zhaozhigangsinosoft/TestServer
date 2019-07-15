@@ -3,7 +3,7 @@ package cn.mainapp;
 public class ChaRuPaiXu {
     static int counter = 0;
     public static void main(String[] args) {
-        int[] a = {14,13,10,7,6,9,5,1,3,11,12};
+        int[] a = RandomNumber.genArray(100);
         int[] b = new int[a.length];
 
         for (int i = 0; i < a.length; i++) {
