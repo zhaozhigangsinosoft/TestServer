@@ -17,7 +17,7 @@ public class ChaRuPaiXu {
                 index++;
             }
             for (int j = i; j >= index+1; j--) {
-                exch(b,j,j-1);
+                b[j]=b[j-1];
             }
             b[index]=a[i];
         }
@@ -26,12 +26,5 @@ public class ChaRuPaiXu {
         }
         System.out.println("运行次数："+counter);
 
-    }
-    
-
-    public static void exch(int[] a3, int a, int a2) {
-        int temp = a3[a];
-        a3[a] = a3[a2];
-        a3[a2] = temp;
     }
 }
